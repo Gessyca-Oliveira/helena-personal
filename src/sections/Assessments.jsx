@@ -3,7 +3,7 @@ import { ASSESSMENTS } from '../config/plans';
 
 export default function Assessments() {
   return (
-    <Box component="section" aria-labelledby="titulo-avaliacoes" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.paper' }}>
+    <Box component="section" aria-labelledby="titulo-avaliacoes" sx={{ py: { xs: 8, md: 12 } }}>
       <Container maxWidth="lg">
         <Typography variant="h2" id="titulo-avaliacoes" sx={{ maxWidth: 760 }}>
           Avaliação completa <Box component="span" sx={{ color: 'primary.main' }}>antes de começar</Box>

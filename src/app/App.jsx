@@ -3,6 +3,7 @@ import Header from '../sections/Header';
 import Footer from '../sections/Footer';
 import Hero from '../sections/Hero';
 import { PlanBuilderSection } from '../features/plan-builder';
+import Assessments from '../sections/Assessments';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <Header />
       <Box component="main" id="conteudo">
         <Hero />
+        <Assessments />
         <PlanBuilderSection />
       </Box>
       <Footer />
