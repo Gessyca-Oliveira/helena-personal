@@ -1,13 +1,6 @@
-import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <h1>Helena Silva</h1>
-    </>
-  )
+  <h1> Helena Personal</h1>
 }
 
 export default App
