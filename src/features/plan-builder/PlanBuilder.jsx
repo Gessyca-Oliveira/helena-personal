@@ -20,7 +20,7 @@ const pillSx = {
   fontSize: '1.25rem',
 };
 
-export default function PlanBuilder({ selection, plan, onModalityChange, onTimesChange, onDuoChange }) {
+export default function PlanBuilder({ selection, plan, onModalityChange, ondaysChange, onDuoChange }) {
   return (
     <Stack spacing={5.5}>
       <Typography variant="h2" id="titulo-monte">
@@ -59,13 +59,13 @@ export default function PlanBuilder({ selection, plan, onModalityChange, onTimes
             <StepTitle id="passo-2">2. Quantas vezes por semana?</StepTitle>
             <ToggleButtonGroup
               exclusive
-              value={selection.times}
-              onChange={(_, times) => times && onTimesChange(times)}
+              value={selection.days}
+              onChange={(_, days) => days && ondaysChange(days)}
               aria-labelledby="passo-2"
               sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.25 }}
             >
               {plan.options.map((o) => (
-                <ToggleButton key={o.times} value={o.times} sx={pillSx}>{o.times}x</ToggleButton>
+                <ToggleButton key={o.days} value={o.days} sx={pillSx}>{o.days}x</ToggleButton>
               ))}
             </ToggleButtonGroup>
           </Box>

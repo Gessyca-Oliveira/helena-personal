@@ -1,9 +1,10 @@
 import { Box, Container } from '@mui/material';
 import { usePlanSelection } from './usePlanSelection';
 import PlanBuilder from './PlanBuilder';
+import PlanSummary from './PlanSumary';
 
 export default function PlanBuilderSection() {
-  const { selection, summary, setModality, setTimes, setDuo } = usePlanSelection();
+  const { selection, summary, setModality, setdays, setDuo } = usePlanSelection();
 
   return (
     <Box component="section" id="monte" aria-labelledby="titulo-monte" sx={{ bgcolor: 'background.paper', py: { xs: 8, md: 12 } }}>
@@ -15,9 +16,10 @@ export default function PlanBuilderSection() {
           selection={selection}
           plan={summary.plan}
           onModalityChange={setModality}
-          onTimesChange={setTimes}
+          ondaysChange={setdays}
           onDuoChange={setDuo}
         />
+        <PlanSummary summary={summary} />
       </Container>
     </Box>
   );

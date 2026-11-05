@@ -1,7 +1,7 @@
 import { formatPrice } from '../../utils/formatPrice';
 import { whatsappLink } from '../../utils/whatsapp';
 
-export function getPlanSummary({ modality, times, duo }, modalities) {
+export function getPlanSummary({ modality, days, duo }, modalities) {
   const plan = modalities.find((m) => m.id === modality) ?? modalities[0];
 
   if (!plan.options) {
@@ -17,16 +17,16 @@ export function getPlanSummary({ modality, times, duo }, modalities) {
     };
   }
 
-  const option = plan.options.find((o) => o.times === times) ?? plan.options[0];
+  const option = plan.options.find((o) => o.days === days) ?? plan.options[0];
   const withDuo = plan.allowsDuo && duo;
-  const frequency = `${option.times}x por semana`;
+  const frequency = `${option.days}x por semana`;
   const includes = withDuo ? [...plan.includes, 'Atendimento em dupla no mesmo horário'] : plan.includes;
   const message = `Olá Helena! Tenho interesse em ${plan.label}, ${frequency}${withDuo ? ', em dupla' : ''}.`;
 
   return {
     plan,
     title: `${plan.label} · ${frequency}`,
-    period: `${option.times} ${option.times === 1 ? 'treino' : 'treinos'} por semana${withDuo ? ', em dupla' : ''}`,
+    period: `${option.days} ${option.days === 1 ? 'treino' : 'treinos'} por semana${withDuo ? ', em dupla' : ''}`,
     price: formatPrice(option.price),
     includes,
     message,
