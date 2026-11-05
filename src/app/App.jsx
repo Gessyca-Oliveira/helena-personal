@@ -1,6 +1,7 @@
 import { Box, Link } from '@mui/material';
 import Header from '../sections/Header';
 import Footer from '../sections/Footer';
+import Hero from '../sections/Hero';
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
         Pular para o conteúdo
       </Link>
       <Header />
-      <Box component="main" id="conteudo" />
+      <Box component="main" id="conteudo">
+        <Hero />
+      </Box>
       <Footer />
     </>
   );
