@@ -2,6 +2,7 @@ import { Box, Container } from '@mui/material';
 import { usePlanSelection } from './usePlanSelection';
 import PlanBuilder from './PlanBuilder';
 import PlanSummary from './PlanSumary';
+import MobilePriceBar from './MobilePriceBar';
 
 export default function PlanBuilderSection() {
   const { selection, summary, setModality, setdays, setDuo } = usePlanSelection();
@@ -20,6 +21,7 @@ export default function PlanBuilderSection() {
           onDuoChange={setDuo}
         />
         <PlanSummary summary={summary} />
+        <MobilePriceBar summary={summary} />
       </Container>
     </Box>
   );
