@@ -28,6 +28,7 @@ const theme = createTheme({
       styleOverrides: {
         html: { '@media (prefers-reduced-motion: no-preference)': { scrollBehavior: 'smooth' } },
         '*:focus-visible': { outline: `3px solid ${turquoise}`, outlineOffset: 3 },
+        body: { '@media (max-width: 899.95px)': { paddingBottom: 88 } },
       },
     },
     MuiButton: {
