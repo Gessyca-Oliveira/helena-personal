@@ -4,5 +4,7 @@ export const SITE = {
   whatsapp: '558597239490',
   instagramUrl: 'https://www.instagram.com/helena_profissionaledf/',
   instagramHandle: '@helena_profissionaledf',
-  autor: 'Gessyca Oliveira'
+  autor: 'Gessyca Oliveira',
+  city: 'Banabuiú',
+  state: 'CE',
 };

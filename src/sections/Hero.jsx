@@ -1,5 +1,6 @@
 import { Box, Button, Container, Paper, Typography } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { SITE } from '../config/site'
 
 const FACTS = [
   { value: '45 + 45', text: 'Dias de planilha, com atualização do treino', variant: 'filled' },
@@ -30,11 +31,11 @@ export default function Hero() {
           }}
         >
           <Typography variant="overline" component="p" color="primary">
-            Profissional de Educação Física
+            Profissional de Educação Física · {SITE.city} - {SITE.state}
           </Typography>
           <Typography variant="h1" id="titulo-principal">
-            Musculação, CrossFit e{' '}
-            <Box component="span" sx={{ color: 'primary.main' }}>planilha de treino</Box>
+            Musculação e CrossFit{' '}
+            <Box component="span" sx={{ color: 'primary.main' }}>em {SITE.city}</Box>
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
             <Typography color="text.secondary" sx={{ fontSize: { xs: '1.0625rem', md: '1.1875rem' } }}>
