@@ -13,7 +13,7 @@ export default function Footer() {
         <Box>
           <Logo size={20} />
           <Typography sx={{ mt: 1.5, fontSize: '0.9375rem', color: 'text.secondary' }}>
-            {SITE.name} · {SITE.cref}
+            {SITE.name} · {SITE.cref}  · {SITE.city} - {SITE.state}
           </Typography>
         </Box>
         <Box component="nav" aria-label="Contato" sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
