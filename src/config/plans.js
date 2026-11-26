@@ -18,10 +18,11 @@ export const MODALITIES = [
     label: 'Musculação presencial',
     description: 'Acompanhamento personalizado',
     options: [
-      { days: 3, price: 200 },
-      { days: 5, price: 300 },
+      { days: 3, price: 400, duoPrice: 200 },
+      { days: 5, price: 600, duoPrice: 300 },
     ],
     allowsDuo: true,
+    duoPriceNote: 'valor por pessoa',
     includes: [...ASSESSMENT_ITEMS, 'Acesso e disponibilidade via app'],
   },
   {
